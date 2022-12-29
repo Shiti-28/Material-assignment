@@ -1,0 +1,81 @@
+<div style="background-color: aliceblue;">
+  <form [formGroup]="Students">
+  <fieldset>
+    <h1><b>Registration Form</b></h1>
+
+    <div>
+      <mat-form-field appearance="fill"></mat-form-field>
+      <mat-label><b>Name </b></mat-label>
+      <mat-icon class="Material-icon">person</mat-icon>
+      <input matInput placeholder="Name" formControlName="name">
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill"></mat-form-field>
+      <mat-label><b>Email </b></mat-label>
+      <mat-icon class="Material-icon">email</mat-icon>
+      <input matInput placeholder="Email" formControlName="email">
+
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill"></mat-form-field>
+      <mat-label><b>Password </b></mat-label>
+      <mat-icon class="Material-icon">password</mat-icon>
+      <input matInput placeholder="Password" formControlName="password">
+    </div>
+
+    <div>
+      <mat-label formGroupName="gender"><b>Gender </b></mat-label>
+      <mat-form-field appearance="fill">    
+      <mat-radio-group aria-label="Select an Gender">
+      
+        <mat-radio-button value="Male">Male </mat-radio-button>
+        <mat-icon class="Material-icon">male</mat-icon><br>
+
+
+        <mat-radio-button value="Female">Female </mat-radio-button>
+        <mat-icon class="Material-icon">female</mat-icon><br>
+
+        
+        <mat-radio-button value="Other">Other </mat-radio-button>
+        <mat-icon class="Material-icon">transgender</mat-icon><br>
+
+      </mat-radio-group>
+    </mat-form-field>
+    </div>
+
+    <div>
+      <mat-label><b>Choose a date</b></mat-label>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" class="form-control">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill"></mat-form-field>
+      <mat-label><b>MobilNo </b></mat-label>
+      <mat-icon class="Material-icon">phone</mat-icon>
+      <input matInput placeholder="Mobile Number" formControlName="mobile">
+    </div>
+
+    <div>
+        <mat-label><b>Choose Skills</b></mat-label>
+        <mat-form-field appearance="fill">
+          <select formControlName="skills">
+            <option value="Angular Basics">Angular Basics
+            <option value="Angular Intermediate">Angular Intermediate
+            <option value="Angular Advance">Angular Advance
+          </select>
+        </mat-form-field>
+        
+    </div>
+
+
+
+  </fieldset>
+</form>
+</div>
