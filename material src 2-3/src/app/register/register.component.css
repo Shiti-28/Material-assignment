@@ -1,0 +1,17 @@
+.crd{
+    width: 1000px;
+    height: 500px;
+    align-self: center; 
+    margin-left:auto;
+    margin-right:auto;  
+    vertical-align:middle;
+    margin-top:auto;
+    box-shadow: 12px 12px 12px gray;
+    
+}
+.cent{
+    align-self: center; 
+    margin-top: 30px; 
+    justify-content: center;
+}
+

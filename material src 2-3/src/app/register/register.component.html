@@ -1,0 +1,86 @@
+<div>
+  <br>
+  <mat-card class="crd">
+    <mat-card-content>
+    <form [formGroup]="rform" class="cent">
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <mat-icon matIconSuffix>person</mat-icon>
+        <input matInput type="text" placeholder="Enter Full Name" formControlName="fullname">
+      </mat-form-field>
+    
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <mat-icon matSuffix>email</mat-icon>
+        <input matInput type="text" placeholder="Enter Email" formControlName="email">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <mat-icon matSuffix>person</mat-icon>
+        <input matInput type="text" placeholder="Enter UserName" formControlName="username">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <mat-icon matSuffix>visibility</mat-icon>
+        <input matInput type="text" placeholder="Enter Password" formControlName="password">
+      </mat-form-field>
+
+      <br>
+      <mat-radio-group aria-label="Select an Gender" formControlName="gender"><br>
+        <mat-label>Gender</mat-label>
+        <mat-radio-button value="Male">Male </mat-radio-button>
+        <mat-icon matSuffix>male</mat-icon>
+        <mat-radio-button value="Female">Female </mat-radio-button>
+        <mat-icon matSuffix>female</mat-icon>
+        <mat-radio-button value="Other">Other </mat-radio-button>
+        <mat-icon matSuffix>transgender</mat-icon>
+
+      </mat-radio-group>
+
+
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Select DOB</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dob" class="form-control">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>MobileNo</mat-label>
+        <mat-icon matSuffix>phone</mat-icon>
+        <input matInput type="text" placeholder="Mobile Number" formControlName="mobile">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Choose Skills</mat-label>
+        <mat-select formControlName="skills">
+          <mat-option value="Angular Basics">Angular Basics</mat-option>
+          <mat-option value="Angular Intermediate">Angular Intermediate</mat-option>
+          <mat-option value="Angular Advance">Angular Advance</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary" (click)="clk()" type="button">Submit </button><br>
+      </div>
+    </form>
+    <br>
+
+
+
+  </mat-card-content>
+  </mat-card>
+</div>
